@@ -1,0 +1,98 @@
+/* styles.css */
+
+/* Estilo geral da página */
+body {
+    background-color: #1b1f2d; /* Fundo escuro */
+    font-family: 'MedievalSharp', sans-serif;
+    color: #ffffff; /* Texto claro para contraste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Estilo da galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo de cada post */
+.post {
+    background-color: #2e3a56; /* Fundo escuro para os posts */
+    border: 2px solid #000000; /* Borda vermelha para os posts */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif; /* Fonte japonesa */
+}
+
+/* Estilo da imagem sem borda */
+.post img {
+    max-width: 100%;
+    border-radius: 5px; /* Manter o arredondamento dos cantos */
+    transition: opacity 0.3s ease;
+    border: none; /* Remove qualquer borda da imagem */
+}
+
+/* Título do post em branco */
+.post h3 {
+    color: #ffffff; /* Título claro */
+    margin: 10px 0 5px;
+    font-family: 'MedievalSharp', sans-serif; /* Fonte medieval para o título */
+}
+
+/* Descrição inicialmente oculta */
+.post p.descricao {
+    color: #ffffff; /* Texto claro para a descrição */
+    font-size: 12px;
+    opacity: 0; /* Descrição invisível por padrão */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+    padding: 5px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+/* Descrição visível ao passar o mouse */
+.post:hover p.descricao {
+    opacity: 1;
+}
+
+/* Efeito na imagem ao passar o mouse */
+.post:hover img {
+    opacity: 0.8;
+}
+
+/* Botão de envio */
+.botao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4040; /* Vermelho vivo */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: 'Noto Sans JP', sans-serif; /* Fonte japonesa */
+}
+
+/* Efeito de hover no botão */
+.botao:hover {
+    background-color: #cc3333; /* Vermelho mais escuro no hover */
+}
